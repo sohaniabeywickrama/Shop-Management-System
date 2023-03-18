@@ -1,0 +1,85 @@
+DROP DATABASE IF EXISTS BlueRidge;
+CREATE DATABASE IF NOT EXISTS BlueRidge;
+USE BlueRidge;
+
+DROP TABLE IF EXISTS customer;
+create table customer(
+custID varchar(6) PRIMARY KEY,
+custTital varchar(5),
+custName varchar (30),
+custPhoneNo varchar (13),
+custAddress varchar(30),
+custEmail varchar(30),
+city varchar(20),
+province varchar(30),
+RegDate DATE
+);
+
+DROP TABLE IF EXISTS cashier;
+create table cashier(
+castID varchar(6) PRIMARY KEY,
+castName varchar (30),
+castBirthDay DATE,
+castAddress varchar(30),
+castPhoto varchar(100),
+castlogin varchar(20),
+castpassword varchar(20)
+
+);
+
+DROP TABLE IF EXISTS orders;
+create table orders(
+orderID varchar(6) PRIMARY KEY,
+orderDate DATE,
+orderTime TIME,
+custName varchar (30) NOT NULL,
+custPhoneNo varchar (13),
+custAddress varchar(30),
+custEmail varchar(30),
+castID varchar(6),
+FOREIGN KEY (castID) REFERENCES cashier(castID)
+);
+
+DROP TABLE IF EXISTS supplier;
+create table supplier (
+supplierID varchar(6) PRIMARY KEY,
+supplierName varchar(50),
+supplierAddress varchar(20),
+supplierPhone varchar(13),
+supplierEmail varchar(20)
+);
+
+
+DROP TABLE IF EXISTS item;
+create table item (
+itemCode varchar(6) PRIMARY KEY,
+suplayerID varchar(6),
+Description varchar(50),
+packSize varchar(20),
+unitPrice DECIMAL(6,2),
+QtyOnHand INT(5),
+BatchID varchar(6)
+
+);
+
+DROP TABLE IF EXISTS payment;
+create table payment(
+payID varchar(6) PRIMARY KEY,
+custName varchar(30),
+amount DECIMAL  (10,2),
+Discount DECIMAL(10,2),
+orderID varchar(6),
+FOREIGN KEY (orderID) REFERENCES orders(orderID)
+);
+
+DROP TABLE IF EXISTS orderDetail;
+create table orderDetail(
+orderID varchar(6),
+itemCode varchar(6) ,
+orderQTY int(11),
+unitPrice DOUBLE(10,2),
+FOREIGN KEY (orderID) REFERENCES orders(orderID),
+FOREIGN KEY (itemCode) REFERENCES item(itemCode),
+CONSTRAINT PRIMARY KEY (orderID,itemCode)
+
+);

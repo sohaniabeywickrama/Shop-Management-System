@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="794.0" prefWidth="854.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.dashboardController">
+   <children>
+      <Pane prefHeight="81.0" prefWidth="30.0" style="-fx-background-color: linear-gradient(to right top, #550A46, #6D0C74, #930077, #E4007C, #FF5D9E);" />
+      <Pane fx:id="context" layoutX="180.0" layoutY="25.0" />
+      <VBox alignment="TOP_CENTER" prefHeight="816.0" prefWidth="186.0" style="-fx-background-color: linear-gradient(to right top, #550A46, #6D0C74, #930077, #E4007C, #FF5D9E); -fx-background-radius: 30;">
+         <children>
+            <ImageView fitHeight="107.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/sold.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="dtnDashBoard" buttonType="RAISED" onAction="#DashBoardOnAction" prefHeight="75.0" prefWidth="180.0" text="DASHBOARD  " textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/dashboard.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#btnAddCashier" prefHeight="65.0" prefWidth="181.0" text="NEW CASHIER " textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/Girl.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#btnReportOnAction" prefHeight="74.0" prefWidth="186.0" text="ALL REPORTS " textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <Image url="@../resources/reports.png" />
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#btnAddCustomer" prefHeight="58.0" prefWidth="185.0" text="CUSTOMERS  " textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/customer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#AddItemOnAction" prefHeight="70.0" prefWidth="182.0" text="ADD ITEM     " textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/additem.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#btnSuplayerOnAction" prefHeight="71.0" prefWidth="185.0" text="SUPLAYER  " textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/suply.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#btnAboutOnAction" prefHeight="74.0" prefWidth="184.0" text=" ABOUT        " textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/help.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <Pane prefHeight="85.0" prefWidth="185.0" />
+            <Pane prefHeight="0.0" prefWidth="205.0" style="-fx-background-color: linear-gradient(to right top, #550A46, #6D0C74, #930077, #E4007C, #FF5D9E);" />
+            <JFXButton buttonType="RAISED" onAction="#btnLogOut" prefHeight="85.0" prefWidth="203.0" style="-fx-background-color: black;" text="LOGOUT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+   <effect>
+      <DropShadow height="24.11" radius="25.55" spread="0.07" width="80.09" />
+   </effect>
+</AnchorPane>

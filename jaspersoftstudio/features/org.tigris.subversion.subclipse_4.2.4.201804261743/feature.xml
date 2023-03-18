@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.tigris.subversion.subclipse"
+      label="Subclipse"
+      version="4.2.4.201804261743"
+      provider-name="Subclipse"
+      plugin="org.tigris.subversion.subclipse.core">
+
+   <description>
+      %description
+   </description>
+
+   <copyright url="https://github.com/subclipse/subclipse">
+      https://github.com/subclipse/subclipse
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <requires>
+      <import plugin="org.eclipse.core.resources" version="3.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.team.core" version="3.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.runtime" version="3.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.ui.views"/>
+      <import plugin="org.eclipse.jface.text"/>
+      <import plugin="org.eclipse.ui.workbench.texteditor"/>
+      <import plugin="org.eclipse.ui.editors"/>
+      <import plugin="org.eclipse.team.ui"/>
+      <import plugin="org.eclipse.compare"/>
+      <import plugin="org.eclipse.ui.console"/>
+      <import plugin="org.eclipse.help"/>
+      <import plugin="org.eclipse.ui.forms"/>
+      <import plugin="org.eclipse.osgi" version="3.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui" version="3.2.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="org.tigris.subversion.subclipse.core"
+         download-size="344"
+         install-size="765"
+         version="4.2.4.201804261743"
+         unpack="false"/>
+
+   <plugin
+         id="org.tigris.subversion.subclipse.ui"
+         download-size="2169"
+         install-size="4769"
+         version="4.2.4.201804261743"
+         unpack="false"/>
+
+   <plugin
+         id="com.collabnet.subversion.merge"
+         download-size="482"
+         install-size="935"
+         version="4.2.0.1"
+         unpack="false"/>
+ 
+   <plugin
+         id="org.tigris.subversion.clientadapter"
+         download-size="80"
+         install-size="108"
+         version="1.9.7"
+         unpack="false"/>
+
+   <plugin
+         id="org.tigris.subversion.clientadapter.javahl"
+         download-size="228"
+         install-size="270"
+         version="1.9.4.1"
+         unpack="false"/>
+
+</feature>
